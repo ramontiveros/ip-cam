@@ -1,0 +1,13 @@
+version: '2'
+services:
+    web:
+      build: .
+      command: "ng serve --host 0.0.0.0 --port 4200 --poll"
+      ports:
+       - "4200:4200"
+      volumes:
+       - ./:/home/ip-cam
+       - node:/home/ip-cam/node_modules
+       
+volumes:
+    node:

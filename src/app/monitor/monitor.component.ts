@@ -7,7 +7,7 @@ import { IpcamsService } from '../ipcams.service';
   styleUrls: ['./monitor.component.css']
 })
 export class MonitorComponent implements OnInit {
-		cams: Array<any> = [];
+		camsGroups: Array<any> = [];
 		public currentPage = 0;
 		
 		constructor(private camsService: IpcamsService) {
@@ -19,7 +19,7 @@ export class MonitorComponent implements OnInit {
 		}
 
 		next() {
-				this.currentPage++:
+				this.currentPage++;
 		}
 
 		prev() {

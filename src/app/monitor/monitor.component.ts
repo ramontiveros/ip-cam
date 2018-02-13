@@ -8,12 +8,21 @@ import { IpcamsService } from '../ipcams.service';
 })
 export class MonitorComponent implements OnInit {
 		cams: Array<any> = [];
+		public currentPage = 0;
 		
 		constructor(private camsService: IpcamsService) {
-				this.cams = this.camsService.getCams();
+				this.camsGroups = this.camsService.getCams();
 		}
 
 		ngOnInit() {
 				
+		}
+
+		next() {
+				this.currentPage++:
+		}
+
+		prev() {
+				this.currentPage--;
 		}
 }
